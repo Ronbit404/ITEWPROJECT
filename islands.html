@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Must-Visit Islands | Discover Philippines</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="index.html">
+                <i class="fas fa-umbrella-beach me-2"></i>
+                Discover<span class="text-warning">Philippines</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="islands.html">15 Islands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="beaches.html">Beaches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="itinerary.html">Itinerary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html">Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-warning text-white ms-2" href="booking.html">
+                            <i class="fas fa-calendar-alt me-1"></i>Book Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">15 Must-Visit Philippine Islands</h1>
+                    <p class="lead mb-4">From pristine beaches to majestic mountains, discover the diversity of the Philippine archipelago.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Islands Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Island 1: Palawan -->
+                <div class="col-md-4 mb-4" id="palawan">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Palawan">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">1. Palawan</h5>
+                            <p class="card-text">The Last Frontier with stunning lagoons and underground rivers.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Top Rated</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#palawanModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Island 2: Boracay -->
+                <div class="col-md-4 mb-4" id="boracay">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Boracay">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">2. Boracay</h5>
+                            <p class="card-text">World-famous white sand beach and vibrant nightlife.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Best Beaches</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#boracayModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Island 3: Cebu -->
+                <div class="col-md-4 mb-4" id="cebu">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1552465011-b4e30bf7349d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Cebu">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">3. Cebu</h5>
+                            <p class="card-text">Historical sites, beautiful beaches, and whale shark watching.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Cultural</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cebuModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Island 4: Siargao -->
+                <div class="col-md-4 mb-4" id="siargao">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Siargao">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">4. Siargao</h5>
+                            <p class="card-text">Surfing capital with beautiful lagoons and rock pools.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Adventure</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#siargaoModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Island 5: Bohol -->
+                <div class="col-md-4 mb-4" id="bohol">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1559293840--e1c2b2e3c5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Bohol">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">5. Bohol</h5>
+                            <p class="card-text">Chocolate Hills, tarsiers, and beautiful beaches.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Nature</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#boholModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Island 6: Batanes -->
+                <div class="col-md-4 mb-4" id="batanes">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Batanes">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">6. Batanes</h5>
+                            <p class="card-text">Northernmost islands with rolling hills and stone houses.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Scenic</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#batanesModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add 9 more islands following the same pattern -->
+                <!-- Islands 7-15 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1569949381669-ecf31b5c55f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Coron">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">7. Coron</h5>
+                            <p class="card-text">Kayasangan Lake and WWII shipwreck diving sites.</p>
+                            <button class="btn btn-sm btn-outline-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue with islands 8-15 -->
+
+            </div>
+
+            <!-- Island Quick List -->
+            <div class="mt-5">
+                <div class="alert alert-tropical">
+                    <h5><i class="fas fa-compass me-2 text-warning"></i>Complete Island List</h5>
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>1. Palawan</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>2. Boracay</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>3. Cebu</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>4. Siargao</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>5. Bohol</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>6. Batanes</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>7. Coron</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>8. El Nido</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>9. Puerto Galera</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>10. Camiguin</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>11. Siquijor</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>12. Romblon</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>13. Guimaras</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>14. Dinagat</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i>15. Samal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Island Modals -->
+    <!-- Palawan Modal -->
+    <div class="modal fade" id="palawanModal" tabindex="-1" aria-labelledby="palawanModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white" id="palawanModalLabel">Palawan - The Last Frontier</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Highlights</h6>
+                            <ul>
+                                <li>Underground River (UNESCO)</li>
+                                <li>El Nido Lagoons</li>
+                                <li>Coron Wreck Diving</li>
+                                <li>Port Barton Beaches</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Best Time to Visit</h6>
+                            <p>November to May (Dry season)</p>
+                            <h6 class="mt-3">Activities</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-primary">Island Hopping</span>
+                                <span class="badge bg-primary">Scuba Diving</span>
+                                <span class="badge bg-primary">Kayaking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boracay Modal -->
+    <div class="modal fade" id="boracayModal" tabindex="-1" aria-labelledby="boracayModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white" id="boracayModalLabel">Boracay - Tropical Paradise</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Highlights</h6>
+                            <ul>
+                                <li>White Beach</li>
+                                <li>Puka Shell Beach</li>
+                                <li>Bulabog Beach</li>
+                                <li>Mount Luho View</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Best Time to Visit</h6>
+                            <p>November to April</p>
+                            <h6 class="mt-3">Activities</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-primary">Parasailing</span>
+                                <span class="badge bg-primary">Helmet Diving</span>
+                                <span class="badge bg-primary">Sunset Sailing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more modals for other islands -->
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <!-- Same footer content as index.html -->
+            <div class="text-center">
+                <p>&copy; 2024 Discover Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
