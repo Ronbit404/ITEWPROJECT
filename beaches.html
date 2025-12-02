@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Beaches | Discover Philippines</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="index.html">
+                <i class="fas fa-umbrella-beach me-2"></i>
+                Discover<span class="text-warning">Philippines</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="islands.html">15 Islands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="beaches.html">Beaches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="itinerary.html">Itinerary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html">Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-warning text-white ms-2" href="booking.html">
+                            <i class="fas fa-calendar-alt me-1"></i>Book Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="beach-bg text-white py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Tropical Beaches of the Philippines</h1>
+                    <p class="lead mb-4">Discover world-class beaches with powdery white sand and crystal-clear turquoise waters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Beaches -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Top Beach Destinations</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="White Beach, Boracay">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">White Beach, Boracay</h5>
+                            <p class="card-text">4-kilometer stretch of powdery white sand with vibrant nightlife and water activities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">World's Best</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#whiteBeachModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Nacpan Beach, El Nido">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Nacpan Beach, El Nido</h5>
+                            <p class="card-text">4-kilometer twin beach with golden sand and coconut trees in Palawan.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Secluded</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#nacpanBeachModal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Cloud 9, Siargao">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Cloud 9, Siargao</h5>
+                            <p class="card-text">Famous surfing spot with perfect barrels and beautiful boardwalk.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Surfing</span>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cloud9Modal">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Beaches -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1552465011-b4e30bf7349d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Alona Beach, Panglao">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Alona Beach, Panglao</h5>
+                            <p class="card-text">Bohol's most famous beach with white sand and excellent diving spots.</p>
+                            <button class="btn btn-sm btn-outline-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1569949381669-ecf31b5c55f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Bantayan Island, Cebu">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Bantayan Island, Cebu</h5>
+                            <p class="card-text">Pristine beaches with crystal clear waters and laid-back atmosphere.</p>
+                            <button class="btn btn-sm btn-outline-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card island-card">
+                        <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="card-img-top" alt="Coron Beaches">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Coron Beaches, Palawan</h5>
+                            <p class="card-text">Stunning limestone formations with hidden lagoons and lagoons.</p>
+                            <button class="btn btn-sm btn-outline-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beach Activities -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Beach Activities & Resorts</h2>
+            
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card tropical-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="text-primary mb-3">Top Beach Activities</h4>
+                                    <div class="d-flex flex-wrap gap-2 mb-4">
+                                        <span class="badge bg-warning">Island Hopping</span>
+                                        <span class="badge bg-warning">Snorkeling</span>
+                                        <span class="badge bg-warning">Sunset Cruises</span>
+                                        <span class="badge bg-warning">Beach Volleyball</span>
+                                        <span class="badge bg-warning">Surfing</span>
+                                        <span class="badge bg-warning">Kayaking</span>
+                                        <span class="badge bg-warning">Jet Skiing</span>
+                                        <span class="badge bg-warning">Parasailing</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="text-primary mb-3">Recommended Beach Resorts</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-hotel text-warning me-2"></i>Shangri-La Boracay</li>
+                                        <li class="mb-2"><i class="fas fa-hotel text-warning me-2"></i>El Nido Resorts</li>
+                                        <li class="mb-2"><i class="fas fa-hotel text-warning me-2"></i>Henann Resort Alona Beach</li>
+                                        <li class="mb-2"><i class="fas fa-hotel text-warning me-2"></i>Club Paradise Palawan</li>
+                                        <li class="mb-2"><i class="fas fa-hotel text-warning me-2"></i>Siargao Bleu Resort</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Grid -->
+            <div class="activity-grid mt-5">
+                <div class="activity-card">
+                    <i class="fas fa-ship"></i>
+                    <h5>Island Hopping</h5>
+                    <p>Explore multiple islands in a single day tour</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fas fa-fish"></i>
+                    <h5>Snorkeling</h5>
+                    <p>Discover vibrant marine life and coral reefs</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fas fa-sun"></i>
+                    <h5>Sunset Watching</h5>
+                    <p>Witness breathtaking tropical sunsets</p>
+                </div>
+                <div class="activity-card">
+                    <i class="fas fa-camera"></i>
+                    <h5>Photography</h5>
+                    <p>Capture stunning beach landscapes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Best Time to Visit Philippine Beaches</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card tropical-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">Dry Season</h5>
+                                    <p><strong>November to May</strong></p>
+                                    <ul>
+                                        <li>Best for beach activities</li>
+                                        <li>Sunny and warm weather</li>
+                                        <li>Perfect for island hopping</li>
+                                        <li>Calm seas</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">Surfing Season</h5>
+                                    <p><strong>June to October</strong></p>
+                                    <ul>
+                                        <li>Best for surfing (Siargao)</li>
+                                        <li>Fewer tourists</li>
+                                        <li>Better deals on resorts</li>
+                                        <li>Lush green landscapes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beach Survey -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="survey-section">
+                        <h3 class="text-center text-primary mb-4">Beach Experience Survey</h3>
+                        <form id="beachSurveyForm">
+                            <div class="mb-3">
+                                <label class="form-label">What type of beach experience are you looking for?</label>
+                                <select class="form-select" required>
+                                    <option value="">Select an option</option>
+                                    <option>Relaxation and Sunbathing</option>
+                                    <option>Water Sports and Activities</option>
+                                    <option>Romantic Getaway</option>
+                                    <option>Family Vacation</option>
+                                    <option>Adventure and Exploration</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Which beach activities interest you most?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="snorkeling">
+                                    <label class="form-check-label" for="snorkeling">Snorkeling</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="islandHopping">
+                                    <label class="form-check-label" for="islandHopping">Island Hopping</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="surfing">
+                                    <label class="form-check-label" for="surfing">Surfing</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="sunsetCruise">
+                                    <label class="form-check-label" for="sunsetCruise">Sunset Cruises</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Preferred accommodation type:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" value="luxury">
+                                    <label class="form-check-label">Luxury Resort</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" value="midrange">
+                                    <label class="form-check-label">Mid-range Hotel</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accommodation" value="budget">
+                                    <label class="form-check-label">Budget Beach Hut</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Any specific beach destination in mind?</label>
+                                <textarea class="form-control" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Beach Preferences</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="mb-4">Discover Philippines</h4>
+                    <p>Your gateway to tropical paradise, rich culture, and unforgettable adventures.</p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html" class="d-block mb-2">Home</a>
+                        <a href="islands.html" class="d-block mb-2">15 Islands</a>
+                        <a href="culture.html" class="d-block mb-2">Culture</a>
+                        <a href="beaches.html" class="d-block mb-2">Beaches</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Manila, Philippines</p>
+                    <p><i class="fas fa-phone me-2"></i>+63 912 345 6789</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@discoverph.com</p>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-warning" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="text-center">
+                <p>&copy; 2024 Discover Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Beach Modals -->
+    <div class="modal fade" id="whiteBeachModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-image: url('https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                    <h5 class="modal-title">White Beach, Boracay</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Highlights</h6>
+                            <ul>
+                                <li>4km stretch of white sand</li>
+                                <li>Station 1: Luxury resorts</li>
+                                <li>Station 2: Shopping & dining</li>
+                                <li>Station 3: Budget accommodations</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Activities</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-primary">Parasailing</span>
+                                <span class="badge bg-primary">Helmet Diving</span>
+                                <span class="badge bg-primary">Sunset Sailing</span>
+                            </div>
+                            <h6 class="mt-3">Best Time</h6>
+                            <p>November to April</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More beach modals -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
