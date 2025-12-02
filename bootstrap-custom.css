@@ -1,0 +1,56 @@
+/* Custom Colors for Bootstrap */
+.btn-primary {
+    background-color: var(--ocean-blue) !important;
+    border-color: var(--ocean-blue) !important;
+}
+
+.btn-warning {
+    background-color: var(--sunset-orange) !important;
+    border-color: var(--sunset-orange) !important;
+    color: white !important;
+}
+
+.btn-success {
+    background-color: var(--sea-green) !important;
+    border-color: var(--sea-green) !important;
+}
+
+.bg-primary {
+    background-color: var(--ocean-blue) !important;
+}
+
+.bg-warning {
+    background-color: var(--sunset-orange) !important;
+}
+
+.text-primary {
+    color: var(--ocean-blue) !important;
+}
+
+.text-warning {
+    color: var(--sunset-orange) !important;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 700;
+    font-size: var(--font-md);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+    color: var(--sunset-orange) !important;
+}
+
+/* Badge Customization */
+.badge.bg-primary {
+    background-color: var(--ocean-blue) !important;
+}
+
+.badge.bg-warning {
+    background-color: var(--sunset-orange) !important;
+}
