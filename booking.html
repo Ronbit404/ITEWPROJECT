@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Adventure | Discover Philippines</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
+</head>
+<body>
+    <!-- Navigation (Same as other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="index.html">
+                <i class="fas fa-umbrella-beach me-2"></i>
+                Discover<span class="text-warning">Philippines</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="islands.html">15 Islands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="beaches.html">Beaches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="itinerary.html">Itinerary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html">Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-warning text-white ms-2" href="booking.html">
+                            <i class="fas fa-calendar-alt me-1"></i>Book Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Book Your Philippine Adventure</h1>
+                    <p class="lead mb-4">Secure your spot for an unforgettable tropical experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="booking-form-container">
+                        <h3 class="text-center mb-4 text-primary">Booking Details</h3>
+                        <form id="bookingForm">
+                            <div class="row">
+                                <!-- Personal Information -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Contact Number *</label>
+                                    <input type="tel" class="form-control" placeholder="+63 912 345 6789" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" placeholder="your@email.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Nationality *</label>
+                                    <input type="text" class="form-control" placeholder="Your nationality" required>
+                                </div>
+
+                                <!-- Travel Details -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Destination Island *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Island</option>
+                                        <option>Palawan</option>
+                                        <option>Boracay</option>
+                                        <option>Cebu</option>
+                                        <option>Siargao</option>
+                                        <option>Bohol</option>
+                                        <option>Batanes</option>
+                                        <option>Coron</option>
+                                        <option>Samal</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Accommodation Type</label>
+                                    <select class="form-select">
+                                        <option>Resort (5-Star)</option>
+                                        <option>Resort (4-Star)</option>
+                                        <option>Hotel</option>
+                                        <option>Villa</option>
+                                        <option>Homestay</option>
+                                        <option>Beach Hut</option>
+                                    </select>
+                                </div>
+
+                                <!-- Dates -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Check-in Date *</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Check-out Date *</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+
+                                <!-- Pax Information -->
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Total Pax *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select</option>
+                                        <option>1 Person</option>
+                                        <option>2 Persons</option>
+                                        <option>3-4 Persons</option>
+                                        <option>5-6 Persons</option>
+                                        <option>7+ Persons</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Adults</label>
+                                    <input type="number" class="form-control" min="1" value="1">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Children</label>
+                                    <input type="number" class="form-control" min="0" value="0">
+                                </div>
+
+                                <!-- Payment Information -->
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Mode of Payment *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Payment Method</option>
+                                        <option>Credit Card</option>
+                                        <option>Debit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Bank Transfer</option>
+                                        <option>GCash</option>
+                                        <option>Cash on Arrival</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Package Type</label>
+                                    <select class="form-select">
+                                        <option>Basic (Accommodation only)</option>
+                                        <option>Standard (Accommodation + Breakfast)</option>
+                                        <option>Premium (All-inclusive)</option>
+                                        <option>Custom Package</option>
+                                    </select>
+                                </div>
+
+                                <!-- Special Requests -->
+                                <div class="col-12 mb-4">
+                                    <label class="form-label">Special Requests</label>
+                                    <textarea class="form-control" rows="4" placeholder="Dietary restrictions, accessibility needs, celebration details, etc."></textarea>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="col-12 mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Buttons -->
+                                <div class="col-12">
+                                    <div class="d-grid gap-3">
+                                        <button type="submit" class="btn btn-warning btn-lg">
+                                            <i class="fas fa-check-circle me-2"></i>Confirm Booking
+                                        </button>
+                                        <button type="reset" class="btn btn-outline-secondary">
+                                            <i class="fas fa-redo me-2"></i>Reset Form
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Information -->
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                            <h5>Secure Booking</h5>
+                            <p class="text-muted">Your information is protected with 256-bit SSL encryption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-undo-alt fa-3x text-primary mb-3"></i>
+                            <h5>Flexible Cancellation</h5>
+                            <p class="text-muted">Free cancellation up to 7 days before check-in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card tropical-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                            <h5>24/7 Support</h5>
+                            <p class="text-muted">Our team is available round the clock to assist you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2024 Discover Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>
