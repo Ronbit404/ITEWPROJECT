@@ -9,62 +9,132 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            if (this.getAttribute('href').startsWith('#') && this.getAttribute('href').length > 1) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
     });
 
-    // Initialize modals with background images
-    const modalImages = {
-        'palawanModal': 'https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        'boracayModal': 'https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        'cebuModal': 'https://images.unsplash.com/photo-1552465011-b4e30bf7349d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        // Add more modal images as needed
-    };
+    // Star rating functionality
+    const stars = document.querySelectorAll('.star-rating .star');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = this.getAttribute('data-rating');
+            const container = this.closest('.star-rating');
+            const allStars = container.querySelectorAll('.star');
+            
+            allStars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+        });
+    });
 
-    // Set modal background images
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('show.bs.modal', function (e) {
-            const modalId = e.target.id;
-            if (modalImages[modalId]) {
-                const modalHeader = e.target.querySelector('.modal-header');
-                if (modalHeader) {
-                    modalHeader.style.backgroundImage = `url(${modalImages[modalId]})`;
+    // Form handling
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('is-invalid');
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            if (isValid) {
+                // Show success message
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+                alertDiv.innerHTML = `
+                    <strong>Success!</strong> Form submitted successfully. We'll contact you shortly.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                this.appendChild(alertDiv);
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    this.reset();
+                    alertDiv.remove();
+                }, 3000);
+            }
+        });
+    });
+
+    // Image modal functionality
+    const imageModals = document.querySelectorAll('[data-bs-toggle="modal"]');
+    imageModals.forEach(modalTrigger => {
+        modalTrigger.addEventListener('click', function() {
+            const target = this.getAttribute('data-bs-target');
+            const modal = document.querySelector(target);
+            if (modal) {
+                const imgSrc = this.getAttribute('data-img');
+                if (imgSrc) {
+                    const modalHeader = modal.querySelector('.modal-header');
+                    if (modalHeader) {
+                        modalHeader.style.backgroundImage = `url('${imgSrc}')`;
+                    }
                 }
             }
         });
     });
 
     // Testimonial slider
-    const testimonials = document.querySelectorAll('.testimonial');
-    if (testimonials.length > 0) {
-        let currentTestimonial = 0;
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+    if (testimonialSlider) {
+        const testimonials = testimonialSlider.querySelectorAll('.testimonial');
+        const dots = testimonialSlider.querySelectorAll('.testimonial-dot');
         
-        function showTestimonial(index) {
-            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-            document.querySelectorAll('.testimonial-dot').forEach(dot => dot.classList.remove('active'));
+        if (testimonials.length > 0) {
+            let currentTestimonial = 0;
             
-            testimonials[index].classList.add('active');
-            if (document.querySelectorAll('.testimonial-dot')[index]) {
-                document.querySelectorAll('.testimonial-dot')[index].classList.add('active');
+            function showTestimonial(index) {
+                testimonials.forEach(t => t.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+                
+                testimonials[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentTestimonial = index;
             }
-            currentTestimonial = index;
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showTestimonial(index));
+            });
+            
+            // Auto rotate testimonials
+            setInterval(() => {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            }, 5000);
         }
-
-        document.querySelectorAll('.testimonial-dot').forEach((dot, index) => {
-            dot.addEventListener('click', () => showTestimonial(index));
-        });
-
-        // Auto-rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        }, 5000);
     }
+
+    // Set active navigation link
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html') ||
+            (currentPage === 'index.html' && linkPage === '')) {
+            link.classList.add('active');
+        }
+    });
 });
